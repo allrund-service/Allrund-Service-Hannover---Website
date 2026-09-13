@@ -1,1 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dienstleistung anfragen | AllRund-Service Hannover</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      Ihr Partner für alltägliche Unterstützung &nbsp;|&nbsp; Hannover &amp; Umgebung &nbsp;|&nbsp;
+      <a href="tel:+4917629186273">+49 176 29186273</a> &nbsp;|&nbsp;
+      <a href="mailto:info@allrund-service.de">info@allrund-service.de</a>
+    </div>
+    <nav class="navbar">
+      <a href="index.html" class="logo-link"><img src="assets/logo.png" alt="AllRund-Service"></a>
+      <div class="nav-links">
+        <a href="index.html">Startseite</a>
+        <a href="services.html">Dienstleistungen</a>
+        <a href="process.html">So funktioniert es</a>
+        <a href="request.html" class="active">Für Kunden</a>
+        <a href="provider.html">Für Dienstleister</a>
+        <a href="about.html">Über uns</a>
+        <a href="contact.html">Kontakt</a>
+      </div>
+    </nav>
+  </header>
 
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Dienstleistung anfragen</h1>
+        <p>Beschreiben Sie Ihre Anfrage – wir kümmern uns um die passende Vermittlung.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <form action="https://formsubmit.co/info@allrund-service.de" method="POST" class="request-form">
+          <input type="hidden" name="_subject" value="Neue Dienstleistungsanfrage – AllRund-Service">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://allrund-service.de/thanks.html">
+          <input type="hidden" name="_url" value="https://allrund-service.de/request.html">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
+
+          <div class="form-group">
+            <label for="service">Welche Dienstleistung benötigen Sie? *</label>
+            <select id="service" name="Dienstleistung" required>
+              <option value="">Bitte auswählen</option>
+              <option value="Reinigungshilfe">Reinigungshilfe</option>
+              <option value="Haushaltshilfe">Haushaltshilfe</option>
+              <option value="Umzugshilfe">Umzugshilfe</option>
+              <option value="Renovierungshilfe">Renovierungshilfe</option>
+              <option value="Gartenarbeit">Gartenarbeit</option>
+              <option value="Handwerk & Montage">Handwerk &amp; Montage</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="persons">Anzahl der Personen</label>
+            <input type="number" id="persons" name="Anzahl der Personen" min="1" value="1">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Gewünschtes Datum *</label>
+              <input type="date" id="date" name="Gewünschtes Datum" required>
+            </div>
+            <div class="form-group">
+              <label for="time">Gewünschte Uhrzeit *</label>
+              <input type="time" id="time" name="Gewünschte Uhrzeit" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="duration">Voraussichtliche Dauer</label>
+              <input type="text" id="duration" name="Voraussichtliche Dauer" placeholder="z. B. 4 Stunden">
+            </div>
+            <div class="form-group">
+              <label for="location">Ort *</label>
+              <input type="text" id="location" name="Ort" placeholder="Hannover / Umgebung" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="name">Vor- und Nachname *</label>
+            <input type="text" id="name" name="Name" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Telefonnummer *</label>
+              <input type="tel" id="phone" name="Telefonnummer" required>
+            </div>
+            <div class="form-group">
+              <label for="email">E-Mail-Adresse *</label>
+              <input type="email" id="email" name="E-Mail-Adresse" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Weitere Informationen</label>
+            <textarea id="message" name="Weitere Informationen" rows="6" placeholder="Beschreiben Sie bitte kurz, wobei Sie Unterstützung benötigen."></textarea>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label>
+              <input type="checkbox" name="Datenschutzerklärung bestätigt" value="Ja" required>
+              Ich habe die Datenschutzerklärung gelesen und akzeptiere sie. *
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Anfrage senden</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>AllRund-Service Hannover</strong> – Schnell erreichbar:
+        <a href="tel:+4917629186273">+49 176 29186273</a> |
+        <a href="mailto:info@allrund-service.de">info@allrund-service.de</a>
+      </p>
+      <p>Hannover &amp; Umgebung</p>
+      <p>
+        <a href="about.html">Über uns</a> |
+        <a href="contact.html">Kontakt</a> |
+        <a href="#">Rechtliches</a>
+      </p>
+      <p>&copy; AllRund-Service | Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+</body>
+</html>
