@@ -188,3 +188,67 @@ textarea{min-height:130px;resize:vertical}
   .mobile-menu-cta{display:block;margin-top:28px;background:#f59b18!important;color:#12263a!important;text-align:center;border-radius:10px;padding:14px 18px!important;border:0!important;font-weight:800!important}
   body.menu-open{overflow:hidden}
 }
+
+
+/* =========================================================
+   FINAL MOBILE/TABLET NAVIGATION FIX
+   Commit-ready override: keeps navigation visible even if
+   the JavaScript hamburger menu is unavailable.
+   ========================================================= */
+@media (max-width:900px){
+  .nav{
+    flex-wrap:wrap !important;
+  }
+
+  .navlinks{
+    display:flex !important;
+    order:3 !important;
+    width:100% !important;
+    margin-left:0 !important;
+    justify-content:center !important;
+    flex-wrap:wrap !important;
+    gap:8px 14px !important;
+    padding:6px 0 8px !important;
+  }
+
+  .navlinks a{
+    display:block !important;
+    white-space:normal !important;
+  }
+
+  .nav>.btn{
+    display:inline-block !important;
+    margin-left:auto !important;
+  }
+
+  .mobile-menu-toggle{
+    display:none !important;
+  }
+}
+
+@media (max-width:650px){
+  .nav{
+    flex-wrap:wrap !important;
+  }
+
+  .navlinks{
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    width:100% !important;
+    gap:0 !important;
+    padding:6px 0 3px !important;
+    text-align:center !important;
+  }
+
+  .navlinks a{
+    padding:7px 4px !important;
+    min-width:0 !important;
+    white-space:normal !important;
+    line-height:1.25 !important;
+    border-top:1px solid #eef2f5 !important;
+  }
+
+  .nav>.btn{
+    display:none !important;
+  }
+}
