@@ -189,13 +189,16 @@ textarea{min-height:130px;resize:vertical}
   body.menu-open{overflow:hidden}
 }
 
-
 /* =========================================================
-   FINAL MOBILE/TABLET NAVIGATION FIX
-   Commit-ready override: keeps navigation visible even if
-   the JavaScript hamburger menu is unavailable.
+   FINAL RESPONSIVE NAVIGATION – VERSION 2
+   Desktop: full navigation
+   Tablet/iPad: full navigation when space allows
+   Phone: hamburger menu
+   Safety: navigation links remain available if JS fails
    ========================================================= */
-@media (max-width:900px){
+
+/* Tablet / iPad */
+@media (max-width:900px) and (min-width:651px){
   .nav{
     flex-wrap:wrap !important;
   }
@@ -226,29 +229,32 @@ textarea{min-height:130px;resize:vertical}
   }
 }
 
+/* Phones: hamburger menu */
 @media (max-width:650px){
   .nav{
-    flex-wrap:wrap !important;
+    flex-wrap:nowrap !important;
   }
 
   .navlinks{
-    display:grid !important;
-    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-    width:100% !important;
-    gap:0 !important;
-    padding:6px 0 3px !important;
-    text-align:center !important;
-  }
-
-  .navlinks a{
-    padding:7px 4px !important;
-    min-width:0 !important;
-    white-space:normal !important;
-    line-height:1.25 !important;
-    border-top:1px solid #eef2f5 !important;
+    display:none !important;
   }
 
   .nav>.btn{
     display:none !important;
+  }
+
+  .mobile-menu-toggle{
+    display:flex !important;
+    margin-left:auto !important;
+    flex:0 0 auto !important;
+  }
+
+  /* Safety fallback if JavaScript is unavailable:
+     links become visible instead of disappearing completely. */
+  .no-js .navlinks{
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    width:100% !important;
+    order:3 !important;
   }
 }
