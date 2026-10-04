@@ -1,1 +1,106 @@
-document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("[data-year]").forEach(function(e){e.textContent=new Date().getFullYear()});const n=document.querySelector("header .nav");if(!n)return;const b=document.createElement("button");b.className="mobile-menu-toggle";b.type="button";b.setAttribute("aria-label","Menü öffnen");b.setAttribute("aria-expanded","false");b.textContent="☰";const p=document.createElement("div");p.className="mobile-menu-panel";p.setAttribute("aria-hidden","true");p.innerHTML='<div class="mobile-menu-top"><img class="mobile-menu-logo" src="assets/logo.png" alt="AllRund-Service"><button class="mobile-menu-close" type="button" aria-label="Menü schließen">×</button></div><nav class="mobile-menu-links" aria-label="Mobile Navigation"><a href="index.html">Startseite</a><a href="services.html">Dienstleistungen</a><a href="process.html">So funktioniert es</a><a href="request.html">Für Kunden</a><a href="provider.html">Für Dienstleister</a><a href="about.html">Über uns</a><a href="contact.html">Kontakt</a><a class="mobile-menu-cta" href="request.html">Dienstleistung anfragen →</a><a href="datenschutz.html">Datenschutz</a></nav>';const l=document.createElement("div");l.className="language-switch";l.setAttribute("aria-label","Sprachauswahl");l.innerHTML='<a href="index.html" class="active" lang="de" aria-current="page">DE</a><span>|</span><a href="index.html" lang="fr">FR</a><span>|</span><a href="en-index.html" lang="en">EN</a>';n.appendChild(l);n.appendChild(b);document.body.appendChild(p);function c(){p.classList.remove("open");b.setAttribute("aria-expanded","false");b.textContent="☰";p.setAttribute("aria-hidden","true")}function o(){p.classList.add("open");b.setAttribute("aria-expanded","true");b.textContent="×";p.setAttribute("aria-hidden","false")}b.addEventListener("click",function(){p.classList.contains("open")?c():o()});p.querySelector(".mobile-menu-close").addEventListener("click",c);p.querySelectorAll("a").forEach(a=>a.addEventListener("click",c));window.addEventListener("resize",function(){if(innerWidth>650)c()})});
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Footer year
+  document.querySelectorAll("[data-year]").forEach(function (el) {
+    el.textContent = new Date().getFullYear();
+  });
+
+  // Remove all existing language selectors
+  document.querySelectorAll(".language-switch").forEach(function (el) {
+    el.remove();
+  });
+
+  // Create ONE language selector
+  const languageSwitch = document.createElement("div");
+  languageSwitch.className = "language-switch";
+  languageSwitch.setAttribute("aria-label", "Language selection");
+
+  languageSwitch.innerHTML = `
+    <a href="index.html">DE</a>
+    <span class="sep">|</span>
+    <a href="index.html">FR</a>
+    <span class="sep">|</span>
+    <a href="en-index.html">EN</a>
+  `;
+
+  const headerNav = document.querySelector("header .nav");
+
+  if (headerNav) {
+    headerNav.appendChild(languageSwitch);
+  }
+
+  // Mobile hamburger menu
+  if (!headerNav) return;
+
+  const menuToggle = document.createElement("button");
+  menuToggle.className = "mobile-menu-toggle";
+  menuToggle.type = "button";
+  menuToggle.setAttribute("aria-label", "Menü öffnen");
+  menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.textContent = "☰";
+
+  const panel = document.createElement("div");
+  panel.className = "mobile-menu-panel";
+  panel.setAttribute("aria-hidden", "true");
+
+  panel.innerHTML = `
+    <div class="mobile-menu-top">
+      <img class="mobile-menu-logo" src="assets/logo.png" alt="AllRund-Service">
+      <button class="mobile-menu-close" type="button" aria-label="Menü schließen">×</button>
+    </div>
+
+    <nav class="mobile-menu-links" aria-label="Mobile Navigation">
+      <a href="index.html">Startseite</a>
+      <a href="services.html">Dienstleistungen</a>
+      <a href="process.html">So funktioniert es</a>
+      <a href="request.html">Für Kunden</a>
+      <a href="provider.html">Für Dienstleister</a>
+      <a href="about.html">Über uns</a>
+      <a href="contact.html">Kontakt</a>
+      <a class="mobile-menu-cta" href="request.html">Dienstleistung anfragen →</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </nav>
+  `;
+
+  headerNav.appendChild(menuToggle);
+  document.body.appendChild(panel);
+
+  function closeMenu() {
+    panel.classList.remove("open");
+    document.body.classList.remove("menu-open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Menü öffnen");
+    menuToggle.textContent = "☰";
+    panel.setAttribute("aria-hidden", "true");
+  }
+
+  function openMenu() {
+    panel.classList.add("open");
+    document.body.classList.add("menu-open");
+    menuToggle.setAttribute("aria-expanded", "true");
+    menuToggle.setAttribute("aria-label", "Menü schließen");
+    menuToggle.textContent = "×";
+    panel.setAttribute("aria-hidden", "false");
+  }
+
+  menuToggle.addEventListener("click", function () {
+    if (panel.classList.contains("open")) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  panel.querySelector(".mobile-menu-close").addEventListener("click", closeMenu);
+
+  panel.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", closeMenu);
+  });
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 650) {
+      closeMenu();
+    }
+  });
+
+});
