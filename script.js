@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   languageSwitch.innerHTML = `
     <a href="index.html">DE</a>
     <span class="sep">|</span>
-    <a href="index.html">FR</a>
+    <a href="fr-index.html">FR</a>
     <span class="sep">|</span>
     <a href="en-index.html">EN</a>
   `;
