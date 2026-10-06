@@ -1,106 +1,118 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-  // Footer year
-  document.querySelectorAll("[data-year]").forEach(function (el) {
-    el.textContent = new Date().getFullYear();
-  });
+  /* =========================
+     LANGUAGE SELECTOR
+  ========================= */
 
-  // Remove all existing language selectors
-  document.querySelectorAll(".language-switch").forEach(function (el) {
-    el.remove();
-  });
+  const languageSwitch = document.querySelector(".language-switch");
 
-  // Create ONE language selector
-  const languageSwitch = document.createElement("div");
-  languageSwitch.className = "language-switch";
-  languageSwitch.setAttribute("aria-label", "Language selection");
-
-  languageSwitch.innerHTML = `
-    <a href="index.html">DE</a>
-    <span class="sep">|</span>
-    <a href="fr-index.html">FR</a>
-    <span class="sep">|</span>
-    <a href="en-index.html">EN</a>
-  `;
-
-  const headerNav = document.querySelector("header .nav");
-
-  if (headerNav) {
-    headerNav.appendChild(languageSwitch);
-  }
-
-  // Mobile hamburger menu
-  if (!headerNav) return;
-
-  const menuToggle = document.createElement("button");
-  menuToggle.className = "mobile-menu-toggle";
-  menuToggle.type = "button";
-  menuToggle.setAttribute("aria-label", "Menü öffnen");
-  menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.textContent = "☰";
-
-  const panel = document.createElement("div");
-  panel.className = "mobile-menu-panel";
-  panel.setAttribute("aria-hidden", "true");
-
-  panel.innerHTML = `
-    <div class="mobile-menu-top">
-      <img class="mobile-menu-logo" src="assets/logo.png" alt="AllRund-Service">
-      <button class="mobile-menu-close" type="button" aria-label="Menü schließen">×</button>
-    </div>
-
-    <nav class="mobile-menu-links" aria-label="Mobile Navigation">
-      <a href="index.html">Startseite</a>
-      <a href="services.html">Dienstleistungen</a>
-      <a href="process.html">So funktioniert es</a>
-      <a href="request.html">Für Kunden</a>
-      <a href="provider.html">Für Dienstleister</a>
-      <a href="about.html">Über uns</a>
-      <a href="contact.html">Kontakt</a>
-      <a class="mobile-menu-cta" href="request.html">Dienstleistung anfragen →</a>
-      <a href="datenschutz.html">Datenschutz</a>
-    </nav>
-  `;
-
-  headerNav.appendChild(menuToggle);
-  document.body.appendChild(panel);
-
-  function closeMenu() {
-    panel.classList.remove("open");
-    document.body.classList.remove("menu-open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Menü öffnen");
-    menuToggle.textContent = "☰";
-    panel.setAttribute("aria-hidden", "true");
-  }
-
-  function openMenu() {
-    panel.classList.add("open");
-    document.body.classList.add("menu-open");
-    menuToggle.setAttribute("aria-expanded", "true");
-    menuToggle.setAttribute("aria-label", "Menü schließen");
-    menuToggle.textContent = "×";
-    panel.setAttribute("aria-hidden", "false");
-  }
-
-  menuToggle.addEventListener("click", function () {
-    if (panel.classList.contains("open")) {
-      closeMenu();
-    } else {
-      openMenu();
+  const pageMap = {
+    "index.html": {
+      de: "index.html",
+      fr: "fr-index.html",
+      en: "en-index.html"
+    },
+    "services.html": {
+      de: "services.html",
+      fr: "fr-services.html",
+      en: "en-services.html"
+    },
+    "process.html": {
+      de: "process.html",
+      fr: "fr-process.html",
+      en: "en-process.html"
+    },
+    "request.html": {
+      de: "request.html",
+      fr: "fr-request.html",
+      en: "en-request.html"
+    },
+    "provider.html": {
+      de: "provider.html",
+      fr: "fr-provider.html",
+      en: "en-provider.html"
+    },
+    "about.html": {
+      de: "about.html",
+      fr: "fr-about.html",
+      en: "en-about.html"
+    },
+    "contact.html": {
+      de: "contact.html",
+      fr: "fr-contact.html",
+      en: "en-contact.html"
     }
-  });
+  };
 
-  panel.querySelector(".mobile-menu-close").addEventListener("click", closeMenu);
+  function getCurrentPage() {
+    let page = window.location.pathname.split("/").pop();
 
-  panel.querySelectorAll("a").forEach(function (link) {
-    link.addEventListener("click", closeMenu);
-  });
-
-  window.addEventListener("resize", function () {
-    if (window.innerWidth > 650) {
-      closeMenu();
+    if (!page || page === "") {
+      page = "index.html";
     }
+
+    return page;
+  }
+
+  function getLanguage(page) {
+    if (page.startsWith("fr-")) return "fr";
+    if (page.startsWith("en-")) return "en";
+    return "de";
+  }
+
+  if (languageSwitch) {
+
+    const currentPage = getCurrentPage();
+    const currentLanguage = getLanguage(currentPage);
+
+    const pageTranslations = pageMap[currentPage] || pageMap["index.html"];
+
+    languageSwitch.innerHTML = `
+      <a href="${pageTranslations.de}" class="${currentLanguage === "de" ? "active" : ""}">DE</a>
+      <span class="sep">|</span>
+      <a href="${pageTranslations.fr}" class="${currentLanguage === "fr" ? "active" : ""}">FR</a>
+      <span class="sep">|</span>
+      <a href="${pageTranslations.en}" class="${currentLanguage === "en" ? "active" : ""}">EN</a>
+    `;
+  }
+
+
+  /* =========================
+     FOOTER YEAR
+  ========================= */
+
+  document.querySelectorAll("[data-year]").forEach(element => {
+    element.textContent = new Date().getFullYear();
   });
+
+
+  /* =========================
+     MOBILE MENU
+  ========================= */
+
+  const nav = document.querySelector("header .nav");
+  const navlinks = document.querySelector(".navlinks");
+
+  if (nav && navlinks && !nav.querySelector(".menu-toggle")) {
+
+    const menuButton = document.createElement("button");
+
+    menuButton.className = "menu-toggle";
+    menuButton.type = "button";
+    menuButton.setAttribute("aria-label", "Menu");
+    menuButton.innerHTML = "☰";
+
+    nav.insertBefore(menuButton, navlinks);
+
+    menuButton.addEventListener("click", () => {
+      navlinks.classList.toggle("open");
+    });
+
+    navlinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navlinks.classList.remove("open");
+      });
+    });
+  }
 
 });
