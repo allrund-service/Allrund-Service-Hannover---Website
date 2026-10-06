@@ -331,3 +331,44 @@ textarea{min-height:130px;resize:vertical}
     display:flex !important;
   }
 }
+/* =========================================================
+   IPAD — FORCE DESKTOP NAVIGATION
+   ========================================================= */
+
+@media (min-width:651px) and (max-width:1100px){
+
+  .mobile-menu-toggle{
+    display:none !important;
+    visibility:hidden !important;
+  }
+
+  .mobile-menu-panel{
+    display:none !important;
+    visibility:hidden !important;
+  }
+
+  .mobile-menu-top,
+  .mobile-menu-links{
+    display:none !important;
+  }
+
+  .nav{
+    flex-wrap:wrap !important;
+  }
+
+  .navlinks{
+    display:flex !important;
+    width:100% !important;
+    order:3 !important;
+    justify-content:center !important;
+    flex-wrap:wrap !important;
+  }
+
+  .navlinks a{
+    display:block !important;
+  }
+
+  .nav>.btn{
+    display:inline-block !important;
+  }
+}
