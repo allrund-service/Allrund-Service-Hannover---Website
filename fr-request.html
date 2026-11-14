@@ -7,163 +7,52 @@
   <meta name="description" content="Demandez facilement une aide pour vos tâches quotidiennes auprès d’AllRund-Service à Hannover et dans les environs.">
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-<div class="topbar">
-  <div class="container">
-    <span>Votre partenaire pour votre quotidien</span>
-    <span>📍 Hannover &amp; Umgebung | ☎ +49 176 29186273 | ✉ info@allrund-service.de</span>
-  </div>
-</div>
-
-<header>
-  <div class="container nav">
-
-    <a href="fr-index.html">
-      <img class="logo" src="assets/logo.png" alt="AllRund-Service">
-    </a>
-
-    <nav class="navlinks">
-      <a href="fr-index.html">Accueil</a>
-      <a href="fr-services.html">Services</a>
-      <a href="fr-process.html">Comment ça marche</a>
-      <a href="fr-request.html">Pour les clients</a>
-      <a href="fr-provider.html">Pour les prestataires</a>
-      <a href="fr-about.html">À propos</a>
-      <a href="fr-contact.html">Contact</a>
-    </nav>
-
-    <a class="btn" href="fr-request.html">Demander un service</a>
-
-  </div>
-</header>
-
+<div class="topbar"><div class="container"><span>Votre partenaire pour votre quotidien</span><span>📍 Hannover &amp; Umgebung | ☎ +49 176 29186273 | ✉ info@allrund-service.de</span></div></div>
+<header><div class="container nav">
+<a href="fr-index.html"><img class="logo" src="assets/logo.png" alt="AllRund-Service"></a>
+<nav class="navlinks"><a href="fr-index.html">Accueil</a><a href="fr-services.html">Services</a><a href="fr-process.html">Comment ça marche</a><a href="fr-request.html">Pour les clients</a><a href="fr-provider.html">Pour les prestataires</a><a href="fr-about.html">À propos</a><a href="fr-contact.html">Contact</a></nav>
+<a class="btn" href="fr-request.html">Demander un service</a>
+</div></header>
 <main>
-
-<section class="page-hero">
-  <div class="container">
-    <div class="eyebrow">POUR LES CLIENTS</div>
-    <h1>Vous avez besoin d’une aide ?</h1>
-    <p>Décrivez-nous votre besoin et nous vous aidons à trouver une personne adaptée.</p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-
-    <div class="notice">
-      <strong>Comment faire votre demande ?</strong>
-      <p>
-        Pour commencer, contactez-nous en indiquant le type de service souhaité,
-        le lieu, la date souhaitée et toute information importante concernant votre besoin.
-      </p>
-    </div>
-
-    <div class="cards" style="margin-top:35px">
-
-      <div class="card">
-        <div class="icon">📝</div>
-        <h3>1. Décrivez votre besoin</h3>
-        <p class="muted">
-          Expliquez-nous précisément ce dont vous avez besoin afin que nous puissions
-          rechercher une personne adaptée.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🤝</div>
-        <h3>2. Mise en relation</h3>
-        <p class="muted">
-          Nous recherchons dans notre réseau un prestataire correspondant à votre demande.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">📅</div>
-        <h3>3. Organisation</h3>
-        <p class="muted">
-          La date, le lieu et les conditions de la prestation sont convenus entre les parties.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-
-    <h2>Faire une demande</h2>
-
-    <p class="muted">
-      Contactez-nous pour nous présenter votre besoin. Nous vous répondrons
-      avec les prochaines étapes et les informations nécessaires.
-    </p>
-
-    <p>
-      ☎ <strong>+49 176 29186273</strong><br>
-      ✉ <strong>info@allrund-service.de</strong>
-    </p>
-
-    <a class="btn" href="mailto:info@allrund-service.de">
-      Nous contacter par e-mail
-    </a>
-
-  </div>
-</section>
-
+<section class="page-hero"><div class="container"><div class="eyebrow">POUR LES CLIENTS</div><h1>Vous avez besoin d’une aide ?</h1><p>Décrivez-nous votre besoin et nous vous aidons à trouver une personne adaptée.</p></div></section>
+<section class="section"><div class="container form-wrap">
+<form action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="be49933d-14bf-4535-9e0e-4ee16d57e361">
+<input type="hidden" name="subject" value="Nouvelle demande de service – AllRund-Service">
+<input type="hidden" name="from_name" value="AllRund-Service Website">
+<input type="hidden" name="redirect" value="https://allrund-service.de/thanks.html">
+<input type="checkbox" name="botcheck" style="display:none">
+<div class="form-grid">
+<div class="full"><label>Quel service recherchez-vous ? *</label><div class="checks">
+<label><input type="radio" name="Service demandé" value="Aide au nettoyage" required> Aide au nettoyage</label>
+<label><input type="radio" name="Service demandé" value="Aide à domicile"> Aide à domicile</label>
+<label><input type="radio" name="Service demandé" value="Aide au déménagement"> Aide au déménagement</label>
+<label><input type="radio" name="Service demandé" value="Aide à la rénovation"> Aide à la rénovation</label>
+<label><input type="radio" name="Service demandé" value="Jardinage"> Jardinage</label>
+<label><input type="radio" name="Service demandé" value="Travaux manuels et montage"> Travaux manuels et montage</label>
+</div></div>
+<div class="full"><label for="description">Décrivez votre demande *</label><textarea id="description" name="Description de la demande" required></textarea></div>
+<div><label for="date">Date souhaitée *</label><input id="date" name="Date souhaitée" type="date" required></div>
+<div><label for="time">Heure souhaitée *</label><input id="time" name="Heure souhaitée" type="time" required></div>
+<div><label for="duration">Durée estimée</label><input id="duration" name="Durée estimée" placeholder="Ex. : 4 heures"></div>
+<div><label for="persons">Nombre de personnes</label><select id="persons" name="Nombre de personnes"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4 ou plus">4 ou plus</option></select></div>
+<div><label for="street">Rue et numéro *</label><input id="street" name="Rue et numéro" required></div>
+<div><label for="zip">Code postal *</label><input id="zip" name="Code postal" required></div>
+<div><label for="city">Ville *</label><input id="city" name="Ville" value="Hannover" required></div>
+<div><label for="name">Prénom et nom *</label><input id="name" name="Nom complet" required></div>
+<div><label for="phone">Téléphone *</label><input id="phone" name="Téléphone" type="tel" required></div>
+<div class="full"><label for="email">Adresse e-mail *</label><input id="email" name="email" type="email" required></div>
+<div class="full"><label for="more">Informations complémentaires</label><textarea id="more" name="Informations complémentaires"></textarea></div>
+<div class="full"><label><input type="checkbox" name="Consentement politique de confidentialité" value="Oui" required> J’ai lu et j’accepte la politique de confidentialité. *</label></div>
+<div class="full"><button class="btn orange" type="submit">Envoyer la demande →</button></div>
+</div></form></div></section>
 </main>
-
-<footer class="footer">
-
-  <div class="container footer-grid">
-
-    <div>
-      <img class="logo" src="assets/logo.png" alt="AllRund-Service">
-      <p>AllRund-Service Hannover</p>
-    </div>
-
-    <div>
-      <h3>Nous contacter</h3>
-      <p>
-        ☎ +49 176 29186273<br>
-        ✉ info@allrund-service.de<br>
-        📍 Hannover &amp; Umgebung
-      </p>
-    </div>
-
-    <div>
-      <h3>Liens utiles</h3>
-      <p>
-        <a href="fr-services.html">Services</a><br>
-        <a href="fr-process.html">Comment ça marche</a><br>
-        <a href="fr-about.html">À propos</a><br>
-        <a href="fr-contact.html">Contact</a>
-      </p>
-    </div>
-
-    <div>
-      <h3>Mentions légales</h3>
-      <p>
-        Mentions légales<br>
-        <a href="datenschutz.html">Protection des données</a><br>
-        CGV
-      </p>
-    </div>
-
-  </div>
-
-  <div class="container">
-    <small>
-      © <span data-year></span> AllRund-Service | Tous droits réservés.
-    </small>
-  </div>
-
-</footer>
-
+<footer class="footer"><div class="container footer-grid">
+<div><img class="logo" src="assets/logo.png" alt="AllRund-Service"><p>AllRund-Service Hannover</p></div>
+<div><h3>Nous contacter</h3><p>☎ +49 176 29186273<br>✉ info@allrund-service.de<br>📍 Hannover &amp; Umgebung</p></div>
+<div><h3>Liens utiles</h3><p><a href="fr-services.html">Services</a><br><a href="fr-process.html">Comment ça marche</a><br><a href="fr-about.html">À propos</a><br><a href="fr-contact.html">Contact</a></p></div>
+<div><h3>Mentions légales</h3><p>Mentions légales<br><a href="datenschutz.html">Protection des données</a><br>CGV</p></div>
+</div><div class="container"><small>© <span data-year></span> AllRund-Service | Tous droits réservés.</small></div></footer>
 <script src="script.js"></script>
-
-</body>
-</html>
+</body></html>
