@@ -6,291 +6,94 @@
   <title>AllRund-Service Hannover – Dienstleistungen & Alltagshilfe</title>
   <meta name="description" content="AllRund-Service vermittelt Kunden zuverlässige Dienstleister für Reinigung, Haushalt, Umzug, Renovierung, Gartenarbeit und Montage in Hannover und Umgebung.">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .language-switch{display:flex;align-items:center;gap:8px;margin-left:10px;white-space:nowrap;font-weight:700}
+    .language-switch a{color:#13263b;text-decoration:none}
+    .language-switch a.active{color:#0d8fe8}
+    .language-switch .sep{color:#7a8792}
+    @media(max-width:650px){
+      .nav{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;column-gap:12px}
+      .language-switch{margin:0}
+      .nav .mobile-menu-toggle{margin-left:0}
+    }
+  </style>
 </head>
-
 <body>
-
 <div class="topbar">
   <div class="container">
     <span>Ihr Partner für Ihren Alltag</span>
     <span>📍 Hannover &amp; Umgebung | ☎ +49 176 29186273 | ✉ info@allrund-service.de</span>
   </div>
 </div>
-
 <header>
   <div class="container nav">
-    <a href="index.html">
-      <img class="logo" src="assets/logo.png" alt="AllRund-Service">
-    </a>
-
+    <a href="index.html"><img class="logo" src="assets/logo.png" alt="AllRund-Service"></a>
     <nav class="navlinks">
-      <a href="index.html">Startseite</a>
-      <a href="services.html">Dienstleistungen</a>
-      <a href="process.html">So funktioniert es</a>
-      <a href="request.html">Für Kunden</a>
-      <a href="provider.html">Für Dienstleister</a>
-      <a href="about.html">Über uns</a>
+      <a href="index.html">Startseite</a><a href="services.html">Dienstleistungen</a>
+      <a href="process.html">So funktioniert es</a><a href="request.html">Für Kunden</a>
+      <a href="provider.html">Für Dienstleister</a><a href="about.html">Über uns</a>
       <a href="contact.html">Kontakt</a>
     </nav>
-
     <a class="btn" href="request.html">Dienstleistung anfragen</a>
+    <div class="language-switch" aria-label="Sprachauswahl">
+      <a href="index.html" class="active" aria-current="page">DE</a>
+      <span class="sep">|</span><a href="fr-index.html">FR</a>
+      <span class="sep">|</span><a href="en-index.html">EN</a>
+    </div>
   </div>
 </header>
-
 <main>
-
-<section class="hero">
-  <div class="container hero-grid">
-
-    <div>
-      <div class="eyebrow">ALLRUND-SERVICE HANNOVER</div>
-
-      <h1>
-        Die Plattform, die Sie schnell mit einer zuverlässigen Person für Ihre
-        <span>alltäglichen Dienstleistungen</span> verbindet.
-      </h1>
-
-      <p>
-        Sie benötigen Unterstützung im Alltag? Wir vermitteln Sie schnell
-        mit passenden und zuverlässigen Dienstleistern entsprechend Ihrer Anfrage.
-      </p>
-
-      <a class="btn orange" href="request.html">
-        Jetzt Dienstleistung anfragen →
-      </a>
-    </div>
-
-    <div class="hero-card" style="background:#ffffff;color:#13263b;border-radius:22px;padding:30px;box-shadow:0 12px 30px rgba(13,38,58,.14);border:1px solid #e5edf3;">
-
-      <h3 style="margin:0 0 24px;color:#12263a;font-size:30px;line-height:1.15;">
-        Ihre Vorteile
-      </h3>
-
-      <div style="display:grid;gap:18px;">
-
-        <div style="display:flex;gap:14px;align-items:flex-start;">
-          <div style="flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#e8f6ff;color:#0d8fe8;display:grid;place-items:center;font-weight:800;font-size:18px;">
-            ✓
-          </div>
-          <div>
-            <strong style="display:block;color:#12263a;font-size:18px;line-height:1.3;">
-              Zuverlässige Vermittlung
-            </strong>
-            <span style="display:block;color:#4d5c69;font-size:15px;line-height:1.45;margin-top:3px;">
-              Passende und zuverlässige Dienstleister
-            </span>
-          </div>
-        </div>
-
-        <div style="display:flex;gap:14px;align-items:flex-start;">
-          <div style="flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#fff3df;color:#f59b18;display:grid;place-items:center;font-weight:800;font-size:18px;">
-            ✓
-          </div>
-          <div>
-            <strong style="display:block;color:#12263a;font-size:18px;line-height:1.3;">
-              Schnell und unkompliziert
-            </strong>
-            <span style="display:block;color:#4d5c69;font-size:15px;line-height:1.45;margin-top:3px;">
-              Passende Unterstützung ohne unnötige Umwege
-            </span>
-          </div>
-        </div>
-
-        <div style="display:flex;gap:14px;align-items:flex-start;">
-          <div style="flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#e8f6ff;color:#0d8fe8;display:grid;place-items:center;font-weight:800;font-size:18px;">
-            ✓
-          </div>
-          <div>
-            <strong style="display:block;color:#12263a;font-size:18px;line-height:1.3;">
-              In Hannover und Umgebung
-            </strong>
-            <span style="display:block;color:#4d5c69;font-size:15px;line-height:1.45;margin-top:3px;">
-              Dienstleister aus Hannover und der Umgebung
-            </span>
-          </div>
-        </div>
-
-        <div style="display:flex;gap:14px;align-items:flex-start;">
-          <div style="flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#fff3df;color:#f59b18;display:grid;place-items:center;font-weight:800;font-size:18px;">
-            ✓
-          </div>
-          <div>
-            <strong style="display:block;color:#12263a;font-size:18px;line-height:1.3;">
-              Große Auswahl an Dienstleistungen
-            </strong>
-            <span style="display:block;color:#4d5c69;font-size:15px;line-height:1.45;margin-top:3px;">
-              Von Reinigung bis Gartenarbeit
-            </span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
+<section class="hero"><div class="container hero-grid">
+  <div>
+    <div class="eyebrow">ALLRUND-SERVICE HANNOVER</div>
+    <h1>Die Plattform, die Sie schnell mit einer zuverlässigen Person für Ihre <span>alltäglichen Dienstleistungen</span> verbindet.</h1>
+    <p>Sie benötigen Unterstützung im Alltag? Wir vermitteln Sie schnell mit passenden und zuverlässigen Dienstleistern entsprechend Ihrer Anfrage.</p>
+    <a class="btn orange" href="request.html">Jetzt Dienstleistung anfragen →</a>
   </div>
-</section>
-
-<section class="section">
-  <div class="container">
-
-    <div class="section-title">
-      <div class="eyebrow">UNSERE DIENSTLEISTUNGEN</div>
-      <h2>Vielfältige Unterstützung für Ihren <span>Alltag</span></h2>
-    </div>
-
-    <div class="cards">
-
-      <div class="card">
-        <div class="icon">🧹</div>
-        <h3>Reinigungshilfe</h3>
-        <p class="muted">Allgemeine Reinigungsarbeiten.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🏠</div>
-        <h3>Haushaltshilfe</h3>
-        <p class="muted">Unterstützung bei alltäglichen Aufgaben im Haushalt.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">📦</div>
-        <h3>Umzugshilfe</h3>
-        <p class="muted">Praktische Unterstützung bei Ihrem Umzug.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🔨</div>
-        <h3>Renovierungshilfe</h3>
-        <p class="muted">Unterstützung bei Renovierungs- und Vorbereitungsarbeiten.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🌱</div>
-        <h3>Gartenarbeit</h3>
-        <p class="muted">Pflege, Aufräumarbeiten und saisonale Tätigkeiten.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🛠️</div>
-        <h3>Handwerk &amp; Montage</h3>
-        <p class="muted">Unterstützung bei einfachen Montage- und Handwerksarbeiten.</p>
-      </div>
-
+  <div class="hero-card" style="background:#ffffff;color:#13263b;border-radius:22px;padding:30px;box-shadow:0 12px 30px rgba(13,38,58,.14);border:1px solid #e5edf3;">
+    <h3 style="margin:0 0 24px;color:#12263a;font-size:30px;line-height:1.15;">Ihre Vorteile</h3>
+    <div style="display:grid;gap:18px;">
+      <div style="display:flex;gap:14px;align-items:flex-start;"><div style="flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#e8f6ff;color:#0d8fe8;display:grid;place-items:center;font-weight:800;font-size:18px;">✓</div><div><strong style="display:block;color:#12263a;font-size:18px;line-height:1.3;">Zuverlässige Vermittlung</strong><span style="display:block;color:#4d5c69;font-size:15px;line-height:1.45;margin-top:3px;">Passende und zuverlässige Dienstleister</span></div></div>
+      <div style="display:flex;gap:14px;align-items:flex-start;"><div style="flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#fff3df;color:#f59b18;display:grid;place-items:center;font-weight:800;font-size:18px;">✓</div><div><strong style="display:block;color:#12263a;font-size:18px;line-height:1.3;">Schnell und unkompliziert</strong><span style="display:block;color:#4d5c69;font-size:15px;line-height:1.45;margin-top:3px;">Passende Unterstützung ohne unnötige Umwege</span></div></div>
+      <div style="display:flex;gap:14px;align-items:flex-start;"><div style="flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#e8f6ff;color:#0d8fe8;display:grid;place-items:center;font-weight:800;font-size:18px;">✓</div><div><strong style="display:block;color:#12263a;font-size:18px;line-height:1.3;">In Hannover und Umgebung</strong><span style="display:block;color:#4d5c69;font-size:15px;line-height:1.45;margin-top:3px;">Dienstleister aus Hannover und der Umgebung</span></div></div>
+      <div style="display:flex;gap:14px;align-items:flex-start;"><div style="flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#fff3df;color:#f59b18;display:grid;place-items:center;font-weight:800;font-size:18px;">✓</div><div><strong style="display:block;color:#12263a;font-size:18px;line-height:1.3;">Große Auswahl an Dienstleistungen</strong><span style="display:block;color:#4d5c69;font-size:15px;line-height:1.45;margin-top:3px;">Von Reinigung bis Gartenarbeit</span></div></div>
     </div>
   </div>
-</section>
-
-<section class="section light">
-  <div class="container">
-
-    <div class="section-title">
-      <div class="eyebrow">SO FUNKTIONIERT ALLRUND-SERVICE</div>
-      <h2>Ihre Unterstützung in wenigen Schritten</h2>
-    </div>
-
-    <div class="steps">
-
-      <div class="step">
-        <div class="num">1</div>
-        <h3>Anfrage senden</h3>
-        <p>Sie teilen uns mit, welche Unterstützung Sie benötigen.</p>
-      </div>
-
-      <div class="step">
-        <div class="num">2</div>
-        <h3>Passende Personen finden</h3>
-        <p>Wir suchen passende Dienstleister in unserem Netzwerk.</p>
-      </div>
-
-      <div class="step">
-        <div class="num">3</div>
-        <h3>Auftrag koordinieren</h3>
-        <p>Wir koordinieren die notwendigen Informationen und den Einsatz.</p>
-      </div>
-
-      <div class="step">
-        <div class="num">4</div>
-        <h3>Unterstützung erhalten</h3>
-        <p>Der ausgewählte Dienstleister führt die vereinbarte Tätigkeit aus.</p>
-      </div>
-
-    </div>
+</div></section>
+<section class="section"><div class="container">
+  <div class="section-title"><div class="eyebrow">UNSERE DIENSTLEISTUNGEN</div><h2>Vielfältige Unterstützung für Ihren <span>Alltag</span></h2></div>
+  <div class="cards">
+    <div class="card"><div class="icon">🧹</div><h3>Reinigungshilfe</h3><p class="muted">Allgemeine Reinigungsarbeiten.</p></div>
+    <div class="card"><div class="icon">🏠</div><h3>Haushaltshilfe</h3><p class="muted">Unterstützung bei alltäglichen Aufgaben im Haushalt.</p></div>
+    <div class="card"><div class="icon">📦</div><h3>Umzugshilfe</h3><p class="muted">Praktische Unterstützung bei Ihrem Umzug.</p></div>
+    <div class="card"><div class="icon">🔨</div><h3>Renovierungshilfe</h3><p class="muted">Unterstützung bei Renovierungs- und Vorbereitungsarbeiten.</p></div>
+    <div class="card"><div class="icon">🌱</div><h3>Gartenarbeit</h3><p class="muted">Pflege, Aufräumarbeiten und saisonale Tätigkeiten.</p></div>
+    <div class="card"><div class="icon">🛠️</div><h3>Handwerk &amp; Montage</h3><p class="muted">Unterstützung bei einfachen Montage- und Handwerksarbeiten.</p></div>
   </div>
-</section>
-
-<section class="section">
-  <div class="container">
-
-    <div class="cta">
-
-      <div>
-        <div class="eyebrow">SCHNELL UND EINFACH</div>
-        <h2>Jetzt Dienstleistung anfragen</h2>
-        <p>
-          Beschreiben Sie Ihren Bedarf – wir kümmern uns um die passende Vermittlung.
-        </p>
-      </div>
-
-      <a class="btn orange" href="request.html">
-        Dienstleistung anfragen →
-      </a>
-
-    </div>
-
+</div></section>
+<section class="section light"><div class="container">
+  <div class="section-title"><div class="eyebrow">SO FUNKTIONIERT ALLRUND-SERVICE</div><h2>Ihre Unterstützung in wenigen Schritten</h2></div>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><h3>Anfrage senden</h3><p>Sie teilen uns mit, welche Unterstützung Sie benötigen.</p></div>
+    <div class="step"><div class="num">2</div><h3>Passende Personen finden</h3><p>Wir suchen passende Dienstleister in unserem Netzwerk.</p></div>
+    <div class="step"><div class="num">3</div><h3>Auftrag koordinieren</h3><p>Wir koordinieren die notwendigen Informationen und den Einsatz.</p></div>
+    <div class="step"><div class="num">4</div><h3>Unterstützung erhalten</h3><p>Der ausgewählte Dienstleister führt die vereinbarte Tätigkeit aus.</p></div>
   </div>
-</section>
-
+</div></section>
+<section class="section"><div class="container"><div class="cta">
+  <div><div class="eyebrow">SCHNELL UND EINFACH</div><h2>Jetzt Dienstleistung anfragen</h2><p>Beschreiben Sie Ihren Bedarf – wir kümmern uns um die passende Vermittlung.</p></div>
+  <a class="btn orange" href="request.html">Dienstleistung anfragen →</a>
+</div></div></section>
 </main>
-
 <footer class="footer">
-
   <div class="container footer-grid">
-
-    <div>
-      <img class="logo" src="assets/logo.png" alt="AllRund-Service">
-      <p>AllRund-Service Hannover</p>
-    </div>
-
-    <div>
-      <h3>Kontakt</h3>
-     <p>
-  ☎ +49 176 29186273<br>
-  ✉ info@allrund-service.de<br>
-  📍 Hannover &amp; Umgebung<br>
-  🕒 Mo–Sa: 07:00–21:00 Uhr
-</p>
-    </div>
-
-    <div>
-      <h3>Nützliche Links</h3>
-      <p>
-        <a href="services.html">Dienstleistungen</a><br>
-        <a href="process.html">So funktioniert es</a><br>
-        <a href="about.html">Über uns</a><br>
-        <a href="contact.html">Kontakt</a>
-      </p>
-    </div>
-
-    <div>
-      <h3>Rechtliches</h3>
-      <p>
-        Impressum<br>
-        <a href="datenschutz.html">Datenschutz</a><br>
-        AGB
-      </p>
-    </div>
-
+    <div><img class="logo" src="assets/logo.png" alt="AllRund-Service"><p>AllRund-Service Hannover</p></div>
+    <div><h3>Kontakt</h3><p>☎ +49 176 29186273<br>✉ info@allrund-service.de<br>📍 Hannover &amp; Umgebung<br>🕒 Mo–Sa: 07:00–21:00 Uhr</p></div>
+    <div><h3>Nützliche Links</h3><p><a href="services.html">Dienstleistungen</a><br><a href="process.html">So funktioniert es</a><br><a href="about.html">Über uns</a><br><a href="contact.html">Kontakt</a></p></div>
+    <div><h3>Rechtliches</h3><p>Impressum<br><a href="datenschutz.html">Datenschutz</a><br>AGB</p></div>
   </div>
-
-  <div class="container">
-    <small>
-      © <span data-year></span> AllRund-Service | Alle Rechte vorbehalten.
-    </small>
-  </div>
-
+  <div class="container"><small>© <span data-year></span> AllRund-Service | Alle Rechte vorbehalten.</small></div>
 </footer>
-
 <script src="script.js"></script>
-
 </body>
 </html>
