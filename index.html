@@ -11,10 +11,39 @@
     .language-switch a{color:#13263b;text-decoration:none}
     .language-switch a.active{color:#0d8fe8}
     .language-switch .sep{color:#7a8792}
-    @media(max-width:650px){
-      .nav{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;column-gap:12px}
-      .language-switch{margin:0}
-      .nav .mobile-menu-toggle{margin-left:0}
+    @media (max-width:650px) {
+      /* Mobile order: logo left, languages centered, hamburger right */
+      header .nav {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 8px !important;
+      }
+
+      header .nav > a:first-child {
+        flex: 0 1 auto;
+        min-width: 0;
+      }
+
+      header .nav .language-switch {
+        display: flex !important;
+        flex: 0 0 auto;
+        margin-left: auto !important;
+        margin-right: 8px !important;
+        white-space: nowrap;
+      }
+
+      header .nav .mobile-menu-toggle {
+        display: flex !important;
+        flex: 0 0 44px;
+        margin-left: 0 !important;
+      }
+
+      header .nav .navlinks,
+      header .nav > .btn {
+        display: none !important;
+      }
     }
   </style>
 </head>
